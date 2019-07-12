@@ -1,0 +1,544 @@
+.pin-element{
+    width: 100%;
+    max-width: 1440px;
+    height: 750px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.pin-element-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#pin {
+    -webkit-transform: translate(-443px, -4312px ) scale(1);
+    transform: translate(-443px, -4312px ) scale(1);
+    -webkit-transform-origin: -4312px -443px;
+    transform-origin: -4312px -443px;
+    -webkit-transform-style: preserve-3D;
+    transform-style: preserve-3D;
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    max-width: none;
+    z-index: 3;
+}
+
+/* section header */
+.background-dark{
+    background-color: #F9F5F4;
+}
+.sections-wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+
+.section-head{
+    width: 100%;
+    position: relative;
+    padding: 70px 10px 40px 10px;
+    .splash-icon{
+        position: absolute;
+        width: auto;
+        height: auto;
+        z-index: 1;
+    }
+    .splash-icon-1{
+        top: 20%;
+        right: 15%;
+        @include setTransform(translateY(0) translateX(-15%));
+        img{
+            width: 100%;
+            max-width: 67px;
+        }
+    }
+    .splash-icon-2{
+        top: 50%;
+        left: 15%;
+        @include setTransform(translateY(-50%) translateX(-15%));
+    }
+}
+.section-head-inner{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-head h3{
+    max-width: 620px;
+    font-family: $bold;
+    font-size: 40px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 55px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #27262b;
+    margin:0 auto 0 auto;
+}
+.section-navigation{
+    ul{
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        li{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            position: relative;
+            span{
+                text-align: center;
+                font-family: $medium;
+                color: #27262b;
+                font-size: 14px;
+                display: block;
+                position: relative;
+                padding-bottom: 20px;
+                cursor: pointer;
+                &:after{
+                    content:'';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: #959499;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    z-index: 2;
+                }
+            }
+            &:after{
+                content:'';
+                position: absolute;
+                bottom: 4px;
+                left: 0;
+                background: #959499;
+                width: 100%;
+                height: 2px;
+                z-index: 1;
+            }
+            &:first-child{
+                &:after{
+                    width: 50%;
+                    left: inherit;
+                    right: 0;
+                }
+            }
+            &:last-child{
+                &:after{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.sections {
+    width: 100%;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .splash-icon{
+        position: absolute;
+        z-index: 1;
+        img{
+            width: 100%;
+            max-width: 110px;
+        }
+    }
+    .splash-icon-2-1{top:80%; left:5%;}
+    .splash-icon-4{top:20%; left:15%;}
+    .splash-icon-7{top:120%; left:30%;}
+    .splash-icon-10{top:100%; left:55%; }
+    .splash-icon-11{top:150%; left:50%;}
+    .splash-icon-14{top: 100%; right: 12%;}
+    .splash-icon-4{
+        img{
+            max-width: 50px;
+        }
+    }
+    .scroll-img{
+        margin-top: 20px;
+        img{
+            width: auto;
+            max-width: inherit;
+        }
+    }
+}
+.sections .section {
+    height: 100vh;
+    height: 1500px;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section.section-3{
+    .splash-icon-4 {
+        top: 8%;
+        left: 15%;
+        @include setTransform(translateY(-8%) translateX(-15%));
+        img{
+            max-width: 70px;
+        }
+    }
+    .splash-icon-2-1{
+        top: 70%;
+        left: 3%;
+        @include setTransform(translateY(-70%) translateX(-3%));
+    }
+    .splash-icon-10{
+        top: 50%;
+        right: 25%;
+        @include setTransform(translateY(-50%) translateX(-25%));
+    }
+    .splash-icon-11{
+        top: 55%;
+        left: 50%;
+        @include setTransform(translateY(-55%) translateX(-50%));
+    }
+}
+.sections .section .content{
+    width: 420px;
+    top: 17%;
+    position: absolute;
+    padding-left: 130px;
+    .scroll-title{
+        font-family: $bold;
+        font-size: 32px;
+        color: $lDark;
+    }
+    p{
+        font-family:$font2;
+        font-size: 16px;
+        color: #5f5e63;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+    .splash-icon{
+        left: 0;
+    }
+}
+.sections .section.section-1 .content{
+    right: 0;
+}
+.sections .section.section-2 .content{
+    left: 0;
+}
+.sections .section.section-3 .content{
+    left: 0;
+}
+.sections .section.section-4 .content{
+    right: 0;
+}
+.sections .section.section-5 .content{
+    left: 0;
+}
+
+.splash-video{
+    display: none;
+    a{
+        margin-top: 10%;
+        position: relative;
+        display: inline-block;
+        max-width: 192px;
+        &:after{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        }
+    }
+}
+
+.compare-calculate{
+    display: inline-block;
+    border: 1px solid #007298;
+    font-size: 16px;
+    text-align: center;
+    padding:15px 0;
+    font-family: $bold;
+    color: #007298;
+    border-radius: 1px;
+    width: 100%;
+    max-width: 125px;
+    margin-top: 10%;
+}
+
+@media screen and (min-width: $breakpointXSM){
+    .ems-home-page-layout{
+        .sticky-header-animate{
+            .site-header{
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    .ems-page-home{
+        .ems-container-full.order-1{
+            overflow: hidden;
+        }
+    }
+
+    /* sections Navigations*/
+    .section-navigation{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 110px;
+        z-index: 5;
+    }
+    .sections-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+
+    .video-list{
+        &-inner{
+            display: none;
+        }
+        .swiper-title{
+            span{
+                margin-top: 30px;
+                font-size: 14px;
+                padding-bottom: 30px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .swiper-container-videolist{
+        padding-left: 40px;
+        padding-right: 40px;
+        .swiper-inner{
+            overflow: visible;
+        }
+        .swiper-slide{
+            width: 100%;
+            padding-right: 10px;
+            padding-left: 10px;
+            .video-p{
+                left: 0;
+                right: 0;
+                width: 50%;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                top: 50%;
+                bottom: inherit;
+                @include setTransform(translateY(-50%));
+            }
+        }
+    }
+    .tasarruf-hesapla{
+        .secim-liste{
+            ul {
+                text-align: left;
+                li{
+                    width: 50%;
+                    text-align: left;
+                    &.t3{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        .popup-hesapla-btn{
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+    .tasarruf-hesapla-ortala{
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: $eGray;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: $lDark;
+        }
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: $lDark;
+        }
+        .secim-liste{
+            max-height: 300px;
+            overflow: hidden;
+            overflow-y: auto;        
+        }
+    }
+}
+
+
+//@media screen and (max-width: 640px){
+
+    html.mobileVer{
+    
+    .section-head{
+        margin-top: 0;
+        padding-top: 40px;
+        margin-bottom: 0;
+        height: auto;
+        background: #ffffff;
+        h3{
+            font-size: 20px;
+            line-height: 25px;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: left;
+        }
+        .splash-icon{display: none;}
+    }
+    /* sections Navigations*/
+    .section-navigation{
+        border-top: 1px solid #e0dfe7;
+        border-bottom: 1px solid #e0dfe7;
+        background: #fff;
+        overflow: hidden;
+        top: 85px;
+        &-inner{
+            overflow: hidden;
+        }
+        ul{
+            display: flex;
+            table-layout: auto;
+            li{
+                width: auto;
+                display: flex;
+                padding: 14px 15px;
+                span{
+                    padding-bottom: 0;
+                    &:after{display: none;}
+                }
+                &:after{
+                    height: 1px;
+                    background: #27262b;
+                    bottom: -1px;
+                    display: none;
+                }
+                &:first-child,
+                &:last-child{
+                    &:after{
+                        width: 100%;
+                    }
+                }
+                &:first-child{
+                    &:after{
+                        left: 0;
+                        right: inherit;
+                    }
+                }
+                &.selected {
+                    &:after{
+                        display: block;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .sections{
+        height: 620px;
+        overflow: hidden;
+        .splash-icon-element{display: none;}
+        .section{
+            height: 620px;
+            .content{
+                top: inherit;
+                width: 50%;
+                left: 20px;
+                bottom: 10%;
+                padding-left: 60px;
+                .scroll-title{
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 14px;
+                    max-height: 72px;
+                    overflow: hidden;
+                }
+            }
+        }
+        .section.section-1{
+            .content{
+                left: 20px;
+                right: inherit;
+            }
+        }
+        .section.section-2,
+        .section.section-3,
+        .section.section-5{
+            .content{
+                left: 20px;
+            }
+        }
+        .splash-icon{
+            img{
+                max-width: 50px;
+            }
+        }
+    }
+    .tasarruf-hesapla{
+        .baslik2{
+            font-size: 14px;
+        }
+        .secim-liste{
+            ul {
+                li{
+                    width: 33.333%;
+                    position: relative;
+                    padding-left: 20px;
+                    padding-right: 5px;
+                    &:before{
+                        width: 16px;
+                        height: 16px;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        margin-top: -8px;
+                        margin-right: 0;
+                    }
+                    span{
+                        word-break: break-word;
+                    }
+                }
+            }
+        }
+        .secim-sonuc{
+            height: 150px;
+        }
+        .popup-hesapla-btn{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: calc(100% - 40px);
+            z-index: 1;
+        }
+        .tekrar-hesapla-btn{
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+//}

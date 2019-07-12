@@ -1,0 +1,12 @@
+.minPpIframe{width: 100%; height: 100%;  position:absolute; top:0; left:0;}
+
+.jconfirm.video-popup .jconfirm-box div.jconfirm-closeIcon{
+    background:url(/images/frontend/popup-close.png) center center no-repeat #fff;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #cecdd6;
+    border-radius: 100%;
+    top: 5px;
+    right: 5px;
+}
+.jconfirm.video-popup .jconfirm-box div.jconfirm-content-pane{margin-bottom: 0 !important;}

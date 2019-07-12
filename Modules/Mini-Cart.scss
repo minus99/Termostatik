@@ -1,0 +1,398 @@
+@media screen and (min-width: $breakpointXSM){
+    .mod-mini-cart {
+        display: inline-block;
+        vertical-align: middle;
+        &-header{
+            .ems-cart-info{
+                cursor: pointer;
+                padding:34px 0 34px 15px;
+                text-align: center;
+                position: relative;
+                span[id$="lbfKUTU_URUN"]{ display:none; }
+                span{
+                    font-family: $medium;
+                    font-size: 12px;
+                    letter-spacing: $ltSpace;
+                }
+                span[id$="lbfKUTU_SEPET"]{
+                    display:inline-block;
+                    vertical-align:middle;
+                    > span{
+                        margin-right: 7px;
+                        line-height: 1;
+                        margin-top: 3px;
+                    }
+                    > span, > i{
+                        display:inline-block;
+                        vertical-align:middle;
+                    }
+                    > span.detail-show{
+                        display: none;
+                    }
+                    i {
+                        font-size: 17px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        &:before{
+                            font-size: 17px;
+                        }
+                    }
+                }   
+                span[id$="lblUrunAdet"]{
+                    float: left;
+                    font-family: $medium;
+                    color: #007298;
+                    border-radius: 100%;
+                    display: none;
+                    font-size: 12px;
+                    letter-spacing: 0;
+                    padding: 4px;
+                    &:empty{display: none;}
+                }
+            }
+        }
+        &-body{
+            position: absolute;
+            top: 100px;
+            width: 440px;
+            height: auto;
+            z-index: 20;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(all 0.3s ease);
+            background: #fff;
+            -webkit-box-shadow: 0 2px 33px rgba(0,0,0,.23);
+            box-shadow: 0 2px 33px rgba(0,0,0,.23);
+            &:before{
+                content:'';
+                position: absolute;
+                top: -18px;
+                right: 60px;
+                margin: 0 auto;
+                border: 0 solid rgba(255,255,255,0);
+                border-width: 0 13.5px 18px;
+                border-bottom-color: #FFF;
+                height: 0;
+                width: 0;
+            }
+            div.title{
+                display: block;
+                padding: 30px 45px 20px 45px;
+                text-align: center;
+                /*position: relative;*/
+                display: none;
+                span{
+                    font-family: $medium;
+                    font-size: 20px;
+                    display: inline-block;
+                    p.sepetAdet {
+                        font-family: $regular;
+                        font-size: 11px;
+                        b span {
+                            font-size: 11px;
+                        }
+                    }
+                }
+                .ems-mini-cart-close{
+                    position: absolute;
+                    top: 0px;
+                    right: 0;
+                    width: 24px;
+                    height: 24px;
+                    z-index: 1;
+                    text-align: center;
+                    cursor: pointer;
+                    i{line-height: 24px;}
+                    i, i:before{
+                        font-size: 10px;
+                        color: #cacaca;
+                    }
+                }
+            }
+            span.kutuSepet_urunYok{
+                .wrapper{
+                    padding: 55px 45px 40px;
+                    text-align: center;
+                    .icon-ico_mini-card{
+                        display: none;
+                        text-align: center;
+                    }
+                    .icon-ico_mini-card, .icon-ico_mini-card:before{
+                        font-size: 55px;
+                    }
+                    .cart-empty-text{
+                        font-family: $medium;
+                        font-size: 20px;
+                        text-align: center;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        padding-bottom: 10px;
+                    }
+                    > span{
+                        font-family: $regular;
+                        font-size: 12px;
+                        padding: 5px 0px 30px 0px;
+                        display: inline-block;
+                        b {
+                            font-family: $medium;
+                            font-weight: normal;    
+                        }
+                    }
+                }
+            }
+            &.show{
+                .mod-mini-cart-cargo-info{display: block;}
+            }
+            .mini-cart-up-arrow, .mini-cart-down-arrow  {
+                width: 29px;
+                height: 29px;
+                margin: 0 auto;
+                display: none;
+                padding: 8px;
+            }
+        }
+        .kutuSepet_icerik_wrapper{
+            display: none;
+            padding: 0px 45px;
+            ::-webkit-scrollbar{
+                width: 0;
+            }
+            ::-webkit-scrollbar-track {
+                background: $eGray;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: $lDark;
+            }
+            ::-webkit-scrollbar-thumb:window-inactive {
+                background: $lDark;
+            }
+            &:hover{
+                ::-webkit-scrollbar{
+                    width: 3px;
+                }
+            }
+        }
+        .kutuSepet_icerik{
+            max-height: 185px;
+            overflow-x: hidden;
+            @include transition(all 0.3s ease);
+            @include setTransform(translateY(20px));
+            opacity: 0;
+            > .ems-col{
+                background: #fff;
+                display: table;
+                width: 100%;
+                float: inherit;
+                cursor: pointer;
+            }
+            > div:last-child{
+                border-bottom: 2px solid #F2F2F2;
+            }
+            .ems-col{
+                border-top: 2px solid #F2F2F2;
+                padding: 15px 0;
+                > div{
+                    display: table-cell;
+                    vertical-align: top; 
+                }
+                .cart-prd-left{
+                    width:50px;
+                    img { width:100%; }
+                }
+                .cart-prd-right{ 
+                    position: relative;
+                    padding-left: 10px;
+                    padding-right: 30px;
+                    padding-bottom: 0;
+                    .cart-prd-code {
+                        display: none;
+                    }
+                    .cart-prd-size{
+                        display: none;
+                    }
+                    .cart-prd-remove{
+                        position: absolute;
+                        top: -5px;
+                        right: 0;
+                        width: 25px;
+                        height: 25px;
+                        z-index: 1;
+                        opacity: 0;
+                        @include transition (opacity .2s ease);
+                        a{
+                            width: 25px;
+                            height: 25px;
+                            display: block;
+                            text-align: center;
+                            i{line-height: 25px;}
+                            i:before{font-size: 10px; color: #000;}
+                            span{display: none;}
+                        }
+                    }
+                    .cart-prd-name{
+                        min-height: 17px;
+                        max-height: 17px;
+                        margin-bottom: 5px;
+                        line-height: 17px;
+                        overflow: hidden;
+                        font-size: 14px;
+                        font-family: $regular;
+                        text-align: left;
+                    }
+                    .cart-prd-price{
+                        font-family: $medium;
+                        font-size: 14px;
+                        display: inline-block;
+                        vertical-align: top;
+                        min-width: 50%;
+                        padding-top: 5px;
+                        text-align: left;
+                        &:empty{display: none;}
+                    }
+                }
+                .cart-prd-quantity {
+                    padding-top: 5px;
+                    display: inline-block;
+                    vertical-align: top;
+                    min-width: 50%;
+                    &:empty{display: none;}
+                }
+                .iControl{
+                    text-align: right;
+                    a {
+                        display: inline-block;
+                        border: 1px solid $inputborder;
+                        padding: 7px;
+                        display: none !important;
+                        span{ display: none; }
+                        i, i:before{ font-size: 9px; }
+                    }
+                    span{
+                        text-align:right;
+                        font-family: $regular;
+                        font-size: 10px;
+                        &:before {
+                            content:'Adet: '
+                        }
+                    }
+                    a, span{ display:inline-block; vertical-align:middle; }
+                }
+                &:hover {
+                    .cart-prd-remove{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .mod-mini-cart-col-total{
+            display: inline-block;
+            width: 100%;
+            padding: 15px 45px 40px 45px;
+            .mod-mini-cart-col-label{
+                min-width: 100%;
+                vertical-align: middle;
+                display:flex;
+                justify-content: space-between;
+                padding: 20px 0;
+                > span{
+                    display: block;
+                    font-family: $medium;
+                    font-size: 16px;
+                    text-align: left;
+                    b{
+                        font-family: $medium;
+                        font-weight: normal;
+                    }
+                }
+            }
+            .mod-mini-cart-col-link{
+                display: inline-block;
+                min-width: 100%;
+                vertical-align: middle;
+                > a{
+                    display: block;
+                    text-align: center;
+                    padding: 17px 10px;
+                    font-family: $medium;
+                    font-size: 16px;
+                    color: #fff;
+                    background: #27262b;
+                    span{
+                        font-family: $medium;
+                    }
+                }
+            }
+        }
+        &-footer{
+            display: none;
+        }
+    }   
+    .mini-cart-ready{
+        .mod-mini-cart{
+            &-body{
+                opacity: 1;
+                visibility: visible;
+                top: 85px;
+            }
+            .kutuSepet_icerik{
+                @include setTransform(translateY(0));
+                opacity: 1;
+            }
+        }
+    }
+    .show-mini-cart-nav {
+        .mod-mini-cart-body .mini-cart-up-arrow,
+        .mod-mini-cart-body .mini-cart-down-arrow {
+            display: block;
+        }
+    }
+}
+
+.basket-full{
+    .mod-mini-cart{
+        &-header{
+            .ems-cart-info{
+                span[id$="lbfKUTU_SEPET"]{
+                    > span.detail-hide{
+                        display: none;    
+                    }
+                    span.detail-show{
+                        display: inline-block;
+                        color: #007298;
+                    }
+                    i:before{color: #007298;}
+                }
+            }
+        }
+    }
+}
+
+
+.basket-full{
+    .mod-mini-cart-body{
+        .kutuSepet_icerik_wrapper, div.title{
+            display: block;
+        }
+    }
+    .mod-mini-cart-header .ems-cart-info span[id$="lblUrunAdet"]{display: inline-block;}
+    .mbHeader > div.mbCart a b {display: inline-block;}
+}
+
+.basket-empty{ 
+    .mod-mini-cart .mod-mini-cart-col-total{display: none;}
+    .mod-mini-cart-body div.title{border-bottom: 0;}
+}
+
+
+@media screen and (max-width: $breakpointXSM){
+    .mod-mini-cart{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5%;
+        &-header,
+        &-body{
+            display: none !important;
+        }
+    }
+}

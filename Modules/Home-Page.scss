@@ -1,0 +1,612 @@
+.sayfaIcDiv{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*New*/
+.home-page-intro {
+    &-inner{
+        position: relative; 
+    }
+    .pic-cvr{
+        background-size: cover !important;
+        background-position: center !important;
+        > a{
+            display: block;
+        }
+    }
+    .intro-guide {
+        .inner{
+            width: 70%;
+        }
+        h1{
+            font-family: $bold;
+            font-size: 20px;
+            line-height: 30px;   
+        }
+        h2{
+            display: none;
+            font-family: $font2;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .intro-video{
+            display: none;
+        }
+    }
+}
+
+.scrollTopMenu{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+    width: auto;
+    height: auto;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(opacity .2s ease);
+    .scrollTopBtnMenu{
+        display: block;
+        span{
+            display: block;
+            font-family: medium;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    }
+}
+.sticky-header-animate{ 
+    .scrollTopMenu{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.ems-pay-info {
+    margin-left: auto;
+    margin-right: auto;
+    ul{
+        li{
+            text-align: center;
+            position: relative;
+            > a {
+                display: block;
+            }
+            .step {
+                i{
+                    width: 46px;
+                    height: 46px;
+                    text-align: center;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                p{
+                    font-size: 17px;
+                    font-family: $bold;
+                    color: #27262b;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                }
+            }
+            .tooltip{
+                display: none;
+                padding: 15px 20px;
+                p{
+                    margin: 0;
+                    font-family: $font2;
+                    color: #007298;
+                    line-height: 20px;
+                    font-size: 14px;
+                    strong{
+                        font-family: $font3;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Hesaplayici*/
+.tasarruf-hesapla{
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #ffffff;
+    z-index: 60;
+    &-ortala{
+        text-align: center;
+    }
+    &-kapsayici{
+        margin-top: 10px;
+        > span{
+            font-size: 20px;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    .counterWrp{
+        .counter-btn {        
+            display: inline-block;
+            vertical-align: middle;  
+            width: 40px;
+            height: 40px;  
+            border: 1px solid #cecdd6;
+            border-radius: 100%;
+            text-align: center;
+            i{
+                line-height: 38px;
+            }
+        }
+        .top-btn{
+            i:before{
+                font-family:'icoNew';
+                content: "\e90d";
+            }
+        }
+        .bottom-btn{
+            i:before{
+                font-family:'icoNew';
+                content: "\e90e";
+            }
+        }
+        input{
+            width: 50px;
+            height: 40px;
+            border: none;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+    .tasarruf-kapat{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: solid 1px #cecdd6;
+        text-align: center;
+        cursor: pointer;
+        i{
+            line-height: 38px;
+        }
+    }
+    .baslik{
+        font-family: $bold;
+        font-size: 20px;
+        color: #27262b;
+    }
+    .baslik2{
+        font-size: 16px;
+        font-family: $font2;
+    }
+    .secim-liste{
+        display: none;
+        ul{
+            width: 100%;
+            display: table;
+            table-layout: fixed;
+            margin-top: 30px;
+            li{
+                display: table-cell;
+                vertical-align: middle;
+                &:before{
+                    content:'';
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 19px;
+                    height: 19px;
+                    margin-right: 10px;
+                }
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                &.t1{
+                    &:before{
+                        background: #27262b;
+                    }
+                }
+                &.t2{
+                    &:before{
+                        background: #5f5e63;
+                    }
+                }
+                &.t3{
+                    &:before{
+                        background: #45ce27;
+                    }
+                }
+            }
+        }
+    }
+    .popup-hesapla-btn {
+        width: 100%;
+        max-width: 220px;
+        font-family: $bold;
+        font-size: 16px;
+        display: inline-block;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-top: 5%;
+    }
+    .tasarruf-hesapla-btn{
+        background: #00719a;
+        color: #fff;
+    }
+    .tekrar-hesapla-btn{
+        border: 1px solid #00719a;
+        color: #00719a;
+        background: #fff;
+    }
+    .secim-sonuc{
+        width: 100%;
+        max-width: 300px;
+        margin: 30px auto 0 auto;
+        display: table;
+        table-layout: fixed;
+        height: 190px;
+        > div{
+            display: table-cell;
+            vertical-align: top;
+            text-align: center;
+            min-width: 50%;
+            height: 100%;
+            padding-right: 30px;
+            padding-left: 30px;
+            > span{
+                display: table;
+                width: 100%;
+                small{
+                    font-family: $font2;
+                    font-size:14px;
+                    color: #fff;
+                    display: table-cell;
+                    vertical-align: middle;
+                    &:before{
+                        font-family: 'tl';
+                        content:'t';
+                        font-size:13px;
+                    }
+                }
+            }
+            &.standart{
+                > span{
+                    &:nth-child(1){
+                        height:30%;
+                        background: #5f5e63;
+                    }
+                    &:nth-child(2){
+                        height:70%;
+                        background: #27262b;
+                    }
+                }
+            }
+            &.full{
+                > span{
+                    &:nth-child(1){
+                        height:25%;
+                        background: #3cb721;
+                    }
+                    &:nth-child(2){
+                        height:30%;
+                        background: #5f5e63;
+                    }
+                    &:nth-child(3){
+                        height:45%;
+                        background: #27262b;
+                    }
+                }
+            }
+        }
+    }
+    .secim-text{
+        display: table;
+        max-width: 300px;
+        margin: 0 auto;
+        width: 100%;
+        p{
+            margin: 0;
+            display: table-cell;
+            vertical-align: top;
+            min-height: 40px;
+            padding-top: 40px;
+        }
+    }
+}
+.calc-popup-ready {
+    .tasarruf-hesapla{display: block;}
+}
+
+.ems-page{
+    &-home{
+        .order-2{
+            background:#e0dfe7;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpointXSM){
+
+    /*Hesaplayici*/
+    .tasarruf-hesapla{
+        max-width: 1000px;
+        padding: 80px 30px 50px 30px;
+        &-ortala{
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .baslik{
+            font-size: 32px;
+        }
+        .baslik2{
+            font-size: 20px;
+        }
+    }
+    .calc-popup-ready .vailTasarruf{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .ems-page{
+        width: 100%;
+        padding-bottom: 50px;
+        &-home{
+            .order-1{
+                background: #27262b;
+            }
+        }
+    }
+
+    .ems-container{ padding: 0 10px; }
+
+    /*New*/
+    .home-page-intro {
+        .intro-guide {
+            max-width: 1380px;
+            padding-left: 30px;
+            padding-right: 30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            .inner{
+                width: 40%;
+            }
+            h1{
+                font-size: 40px;
+                line-height: 54px;
+            }
+            h2{
+                display: block;
+                padding-right: 50px;
+            }
+            .video-lnk{
+                display: none;
+                margin-top: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-family: $medium;
+                color: $lDark;
+                font-size: 14px;
+                text-decoration: underline;
+            }
+            .intro-video{
+                max-width: 190px;
+                position: relative;
+                margin-top: 40px;
+                display: block;
+                > a{
+                    display: block;
+                    > span{
+                        position: absolute;
+                        left: 10px;
+                        bottom: 10px;
+                        font-family: $medium;
+                        color: #fff;
+                        font-size: 12px;
+                        letter-spacing: $ltSpace;
+                        &:before{
+                            content:'\e906';
+                            font-family:'icoNew';
+                            color: #fff;
+                            font-size: 12px;
+                            margin-right:5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ems-container-section{
+        width: 100%;
+        max-width: 1440px;
+        margin: $marginAuto;
+    }
+
+    .ems-container-middle{
+        margin: $marginAuto;
+    }
+
+    .ems-pay-info {
+        max-width: 1020px;
+        padding-bottom: 35px;
+        ul{
+            display: table;
+            width: 100%;
+            li{
+                width: 33.333%;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                padding:0 5px 30px 5px;
+                .tooltip{
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background: #d9f1ff;
+                    width: 100%;
+                    height: auto;
+                    z-index: 1;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include transition(all .2s ease);
+                    transition-delay: .2s;
+                    @include setTransform(translateY(20px));
+                }
+                &:hover{
+                    .tooltip{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+
+    .ems-page{
+        padding-bottom: 50px;
+    }
+
+    /*Home Page Intro*/
+    .home-page-intro{
+        .pic-cvr{
+            img{
+                opacity: 0;
+                width: 100%;
+            }
+        }
+        .intro-guide{
+            max-width: 50%;
+            position: absolute;
+            bottom:50px;
+            left: 20px;
+            h1{
+                &:nth-child(1){
+                    font-size: 16px;
+                }
+                &:nth-child(2){
+                    font-size: 16px;
+                }
+            }
+            h2{
+                display: block;
+                font-size: 14px;
+                font-family: $medium;
+            }
+            .video-lnk{display: none;}
+        }
+    }
+
+    /*Widget*/
+    .ems-page-home{
+        .widget{
+            padding-top: 30px;
+            border-top: 1px solid #e0dfe7;
+            margin-top: 40px;
+        }
+    }
+
+    /*Tasarruf Hesapla*/
+    .tasarruf-hesapla{
+        height: 100%;
+        z-index: 100;
+        padding:70px 20px 70px 20px;
+        &-ortala{
+            height: 100%;
+        }
+    }
+
+    .calc-popup-ready {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .ems-inline-flex{
+        &-cell-1{ display: none; }
+        &-cell{
+            margin-top: 10px;
+            > a{
+                display: block;
+            }
+
+        }
+        &-text{
+            margin-top: -45px;
+            background: #fff;
+            min-width: 75%;
+            max-width: 75%;
+            display: table;
+            margin-right: 0;
+            padding: 10px 20px;
+            margin-left: auto;
+            &-small{
+                display: none;
+            }
+            &-meddium,
+            &-big{
+                span{
+                    line-height: 1;
+                    font-family: $medium;
+                    font-size: 24px;
+                    color: #28354f;
+                }
+            }
+            &-big{
+                padding-top: 5px;
+            }
+            &-button{
+                .btn-single{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    
+    .ems-pay-info{
+        ul {
+            li{
+                margin-top: 40px;
+                &:first-child{margin-top: 0;}
+            }
+        }
+    }
+    .scrollTopMenu{display: none;}
+}
+
+@media screen and (max-width: 640px){
+    /*Home Page Intro*/
+    .home-page-intro{
+        .intro-guide{
+            h2{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@include fontFace('light', '/styles/fonts/Museo-Sans/100/museosans-100-webfont', normal);
+@include fontFace('regular', '/styles/fonts/Museo-Sans/300/museosans-300-webfont', normal);
+@include fontFace('medium', '/styles/fonts/Museo-Sans/500/museosans_500-webfont', normal);
+@include fontFace('bold', '/styles/fonts/Museo-Sans/700/museosans_700-webfont', normal);
+
+@include fontFace('font2', '/styles/fonts/Open-Sans/regular/opensans-regular-webfont', normal);
+@include fontFace('font3', '/styles/fonts/Open-Sans/semi-bold/opensans-semibold-webfont', normal);
+
+/**/
+@include fontFace('webl', '/styles/fonts/domainesanstextweb/light/domainesanstextweb-light-webfont', normal);
+@include fontFace('webr', '/styles/fonts/domainesanstextweb/regular/domainesanstextweb-regular-webfont', normal); 
+
+@include fontFace('tl', '/styles/fonts/tl/abakutlsymsans', normal);
